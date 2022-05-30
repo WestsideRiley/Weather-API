@@ -78,36 +78,38 @@ fetch(requestUrl)
 
   }
 
-  var unixTime = data.daily[0].dt;
-  var day1ms = new Date(unixTime*1000);
-  var day1date = day1ms.toLocaleString()
-  var ForecastPanelDate1 = document.getElementById("date1");
-  ForecastPanelDate1.append(day1date);
+//Adds the date to each panel of the five day forecast
+  {
+      var unixTime = data.daily[0].dt;
+      var day1ms = new Date(unixTime*1000);
+      var day1date = day1ms.toLocaleString()
+      var ForecastPanelDate1 = document.getElementById("date1");
+      ForecastPanelDate1.append(day1date);
 
-  var unixTime = data.daily[1].dt;
-  var day2ms = new Date(unixTime*1000);
-  var day2date = day2ms.toLocaleString()
-  var ForecastPanelDate2 = document.getElementById("date2");
-  ForecastPanelDate2.append(day2date);
+      var unixTime = data.daily[1].dt;
+      var day2ms = new Date(unixTime*1000);
+      var day2date = day2ms.toLocaleString()
+      var ForecastPanelDate2 = document.getElementById("date2");
+      ForecastPanelDate2.append(day2date);
 
-  var unixTime = data.daily[2].dt;
-  var day3ms = new Date(unixTime*1000);
-  var day3date = day3ms.toLocaleString()
-  var ForecastPanelDate3 = document.getElementById("date3");
-  ForecastPanelDate3.append(day3date);
+      var unixTime = data.daily[2].dt;
+      var day3ms = new Date(unixTime*1000);
+      var day3date = day3ms.toLocaleString()
+      var ForecastPanelDate3 = document.getElementById("date3");
+      ForecastPanelDate3.append(day3date);
 
-  var unixTime = data.daily[3].dt;
-  var day4ms = new Date(unixTime*1000);
-  var day4date = day4ms.toLocaleString()
-  var ForecastPanelDate4 = document.getElementById("date4");
-  ForecastPanelDate4.append(day4date);
+      var unixTime = data.daily[3].dt;
+      var day4ms = new Date(unixTime*1000);
+      var day4date = day4ms.toLocaleString()
+      var ForecastPanelDate4 = document.getElementById("date4");
+      ForecastPanelDate4.append(day4date);
 
-  var unixTime = data.daily[4].dt;
-  var day5ms = new Date(unixTime*1000);
-  var day5date = day5ms.toLocaleString()
-  var ForecastPanelDate5 = document.getElementById("date5");
-  ForecastPanelDate5.append(day5date);
-
+      var unixTime = data.daily[4].dt;
+      var day5ms = new Date(unixTime*1000);
+      var day5date = day5ms.toLocaleString()
+      var ForecastPanelDate5 = document.getElementById("date5");
+      ForecastPanelDate5.append(day5date);
+  }
 
 //Criteria for selecting the correct image for the five day forecast
   {
@@ -328,7 +330,85 @@ fetch(requestUrl)
   }
  }
 
+//Code for adding temperature data to each panel of the five day forecast
+  {
+    var DailyTemp1 = data.daily[0].temp.day;
+    var ForeTemp1 = document.getElementById("temp1");
+    var DailyTemp1=(DailyTemp1-273.15)*(9/5)+32; 
+    var DailyTemp1=Math.trunc(DailyTemp1);
+    ForeTemp1.append(DailyTemp1);
 
+    var DailyTemp2 = data.daily[1].temp.day;
+    var ForeTemp2 = document.getElementById("temp2");
+    var DailyTemp2=(DailyTemp2-273.15)*(9/5)+32; 
+    var DailyTemp2=Math.trunc(DailyTemp2);
+    ForeTemp2.append(DailyTemp2);
+
+    var DailyTemp3 = data.daily[2].temp.day;
+    var ForeTemp3 = document.getElementById("temp3");
+    var DailyTemp3=(DailyTemp3-273.15)*(9/5)+32; 
+    var DailyTemp3=Math.trunc(DailyTemp3);
+    ForeTemp3.append(DailyTemp3);
+
+    var DailyTemp4 = data.daily[3].temp.day;
+    var ForeTemp4 = document.getElementById("temp4");
+    var DailyTemp4=(DailyTemp4-273.15)*(9/5)+32; 
+    var DailyTemp4=Math.trunc(DailyTemp4);
+    ForeTemp4.append(DailyTemp4);
+
+    var DailyTemp5 = data.daily[4].temp.day;
+    var ForeTemp5 = document.getElementById("temp5");
+    var DailyTemp5=(DailyTemp5-273.15)*(9/5)+32; 
+    var DailyTemp5=Math.trunc(DailyTemp5);
+    ForeTemp5.append(DailyTemp5);
+  } 
+ 
+//Code for adding temperature data to each panel of the five day forecast
+  {
+    var WindspeedDay1 = data.daily[0].wind_speed;
+    var Windspeed1 = document.getElementById("wind1");
+    Windspeed1.append(WindspeedDay1);
+
+    var WindspeedDay2 = data.daily[1].wind_speed;
+    var Windspeed2 = document.getElementById("wind2");
+    Windspeed2.append(WindspeedDay2);
+
+    var WindspeedDay3 = data.daily[2].wind_speed;
+    var Windspeed3 = document.getElementById("wind3");
+    Windspeed3.append(WindspeedDay3);
+
+    var WindspeedDay4 = data.daily[3].wind_speed;
+    var Windspeed4 = document.getElementById("wind4");
+    Windspeed4.append(WindspeedDay4);
+
+    var WindspeedDay5 = data.daily[4].wind_speed;
+    var Windspeed5 = document.getElementById("wind5");
+    Windspeed5.append(WindspeedDay5);
+  }  
+
+//Code for adding the Humidity to the five day forecast
+  {
+    var HumidityDay1 = data.daily[0].humidity;
+    var Humidity1 = document.getElementById("humid1");
+    Humidity1.append(HumidityDay1);
+
+    var HumidityDay2 = data.daily[1].humidity;
+    var Humidity2 = document.getElementById("humid2");
+    Humidity2.append(HumidityDay2);
+
+    var HumidityDay3 = data.daily[2].humidity;
+    var Humidity3 = document.getElementById("humid3");
+    Humidity3.append(HumidityDay3);
+
+    var HumidityDay4 = data.daily[3].humidity;
+    var Humidity4 = document.getElementById("humid4");
+    Humidity4.append(HumidityDay4);
+
+    var HumidityDay5 = data.daily[4].humidity;
+    var Humidity5 = document.getElementById("humid5");
+    Humidity5.append(HumidityDay5);
+
+  }
 }
 );
 
