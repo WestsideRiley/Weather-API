@@ -12,7 +12,7 @@ function FillAustin(){
   clear();
   document.getElementById("city").append("Austin");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=30.2672&lon=-97.7431&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=30.2672&lon=-97.7431&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -428,7 +428,7 @@ function FillChicago(){
   clear();
   document.getElementById("city").append("Chicago");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=41.8781&lon=-87.6298&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=41.8781&lon=-87.6298&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -844,7 +844,7 @@ function FillNewYork(){
   clear();
   document.getElementById("city").append("New York");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=40.7128&lon=-74.0060&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=40.7128&lon=-74.0060&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -1260,7 +1260,7 @@ function FillOrlando(){
   clear();
   document.getElementById("city").append("Orlando");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=28.5384&lon=-81.3789&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=28.5384&lon=-81.3789&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -1676,7 +1676,7 @@ function FillSanFrancisco(){
   clear();
   document.getElementById("city").append("San Francisco");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=37.7749&lon=-122.4194&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=37.7749&lon=-122.4194&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -2092,7 +2092,7 @@ function FillSeattle(){
   clear();
   document.getElementById("city").append("Seattle");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=47.6062&lon=-122.3321&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=47.6062&lon=-122.3321&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -2508,7 +2508,7 @@ function FillDenver(){
   clear();
   document.getElementById("city").append("Denver");
   
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=39.7392&lon=-104.9903&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+  var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=39.7392&lon=-104.9903&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
   
   fetch(requestUrl)
     .then(function (response) {
@@ -2924,7 +2924,7 @@ function FillAtlanta(){
   clear();
 document.getElementById("city").append("Atlanta");
 
-var requestUrl = 'http://api.openweathermap.org/data/2.5/onecall?lat=33.7490&lon=-84.3880&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
+var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.7490&lon=-84.3880&exclude=hourly,minutely,alerts&id=524901&appid=80a501585cb91fa19fef28a3ad196dae';
 
 fetch(requestUrl)
   .then(function (response) {
